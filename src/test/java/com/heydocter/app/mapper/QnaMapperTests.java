@@ -44,9 +44,9 @@ public class QnaMapperTests {
         qnaVO.setQnaIsPublic(QuestionType.PUBLIC.isPublic());
         qnaVO.setDoctorDepartmentType(DepartmentType.MENTAL_HEALTH.getType());
 
-//        IntStream.range(0, 10).forEach(i -> qnaMapper.insert(qnaVO));
+        IntStream.range(0, 10).forEach(i -> qnaMapper.insert(qnaVO));
 
-        AssertionsForClassTypes.assertThat(qnaMapper.selectList(0).size()).isEqualTo(1);
+        AssertionsForClassTypes.assertThat(qnaMapper.selectList(0).size()).isEqualTo(10);
     }
 
 //    @Test
